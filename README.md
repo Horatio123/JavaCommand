@@ -1,15 +1,29 @@
 # JenkinsTest
 
 ## SingleClassJar:
-javac App.java <br>
-jar -cvmf manifest.txt App.jar App.class <br>
+```
+javac App.java
+jar -cvmf manifest.txt App.jar App.class
 java -jar App.jar
+```
 ## MultiClassJar:
 ### run class:
-javac *.java <br>
-java ShowStudent swimming riding<br>
+```
+javac *.java
+java ShowStudent swimming riding
+```
 ### run jar:
-javac -d ../classes/ *.java<br>
-cd ..<br>
-jar -cvmf manifest.txt test.jar -C classes/ .<br>
-java -jar test.jar shooting driving<br>
+```
+javac -d ../classes/ *.java
+cd ..
+jar -cvmf manifest.txt test.jar -C classes/ .
+java -jar test.jar shooting driving
+```
+
+## java within package
+exp: class QuickFindUF in package baimahu
+```
+javac QuickFindUF.java
+cd ..
+java baimahu.QuickFindUF
+```
